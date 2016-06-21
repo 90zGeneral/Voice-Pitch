@@ -9,6 +9,26 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var recordLabel: UILabel!
+    @IBOutlet var recordButton: UIButton!
+    @IBOutlet var stopRecordingButton: UIButton!
+    
+    @IBAction func record(sender: AnyObject) {
+        
+        recordButton.enabled = false
+        stopRecordingButton.enabled = true
+        recordLabel.text = "Recording in progress"
+        
+    }
+    
+    @IBAction func stopRecording(sender: AnyObject) {
+        
+        recordButton.enabled = true
+        stopRecordingButton.enabled = false
+        recordLabel.text = "Tap to Record"
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +38,10 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        stopRecordingButton.enabled = false
     }
 
 

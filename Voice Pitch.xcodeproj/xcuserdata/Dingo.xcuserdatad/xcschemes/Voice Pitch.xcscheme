@@ -5,6 +5,22 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D52AE8C71D19A6A000F62AC1"
+               BuildableName = "Voice Pitch.app"
+               BlueprintName = "Voice Pitch"
+               ReferencedContainer = "container:Voice Pitch.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -12,7 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D52AE8DB1D19A6A000F62AC1"
+               BuildableName = "Voice PitchTests.xctest"
+               BlueprintName = "Voice PitchTests"
+               ReferencedContainer = "container:Voice Pitch.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D52AE8E61D19A6A000F62AC1"
+               BuildableName = "Voice PitchUITests.xctest"
+               BlueprintName = "Voice PitchUITests"
+               ReferencedContainer = "container:Voice Pitch.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D52AE8C71D19A6A000F62AC1"
+            BuildableName = "Voice Pitch.app"
+            BlueprintName = "Voice Pitch"
+            ReferencedContainer = "container:Voice Pitch.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -26,6 +71,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D52AE8C71D19A6A000F62AC1"
+            BuildableName = "Voice Pitch.app"
+            BlueprintName = "Voice Pitch"
+            ReferencedContainer = "container:Voice Pitch.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +90,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D52AE8C71D19A6A000F62AC1"
+            BuildableName = "Voice Pitch.app"
+            BlueprintName = "Voice Pitch"
+            ReferencedContainer = "container:Voice Pitch.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
