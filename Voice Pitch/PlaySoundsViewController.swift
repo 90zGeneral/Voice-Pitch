@@ -26,23 +26,46 @@ class PlaySoundsViewController: UIViewController {
     var stopTimer: NSTimer!
     
     enum ButtonType: Int {
-        case Slow = 0, Fast, ChipMunk, Vader, Echo, Reverb
+        case Slow = 0, Fast, ChipMunk, DarthVader, Echo, Reverb
     }
-    
-    var recordedAudio: NSURL!
     
     @IBAction func playSoundForButton(sender: UIButton) {
         print("play sound button pressed")
+        
+        switch (ButtonType(rawValue: sender.tag)!) {
+        case .Slow:
+            playSound(rate: 0.5)
+        case .Fast:
+            playSound(rate: 1.5)
+        case .ChipMunk:
+            playSound(pitch: 1000)
+        case .DarthVader:
+            playSound(pitch: -1000)
+        case .Echo:
+            playSound(echo: true)
+        case .Reverb:
+            playSound(reverb: true)
+        }
+        
+        configureUI(.Playing)
     }
     
     @IBAction func stopButtonPressed(sender: UIButton) {
         print("stop audio button pressed")
+        
+        stopAudio()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        setupAudio()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        configureUI(.NotPlaying)
     }
 
     override func didReceiveMemoryWarning() {

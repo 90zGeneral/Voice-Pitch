@@ -82,9 +82,9 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         if segue.identifier == "stopRecording" {
             let playSoundsVC = segue.destinationViewController as! PlaySoundsViewController
             
-            let recordedAudio = sender as! NSURL
+            let recordedAudioURL = sender as! NSURL
             
-            playSoundsVC.recordedAudio = recordedAudio
+            playSoundsVC.recordedAudioURL = recordedAudioURL
         }
     }
 
