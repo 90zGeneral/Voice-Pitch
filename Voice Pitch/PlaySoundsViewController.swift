@@ -11,6 +11,7 @@ import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
     
+    //Declare all the play back sound effect buttons
     @IBOutlet weak var snailButton: UIButton!
     @IBOutlet weak var rabbitButton: UIButton!
     @IBOutlet weak var chipmunkButton: UIButton!
@@ -19,23 +20,29 @@ class PlaySoundsViewController: UIViewController {
     @IBOutlet weak var reverbButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     
+    //This inherits the url file path from the prepareForSegue method within the RecordSoundsViewController class
     var recordedAudioURL: NSURL!
+    
+    //These variables will manipulate the play back sound effects
     var audioFile: AVAudioFile!
     var audioEngine: AVAudioEngine!
     var audioPlayerNode: AVAudioPlayerNode!
     var stopTimer: NSTimer!
     
+    //Organize the play back sounds with an integer value type
     enum ButtonType: Int {
-        case Slow = 0, Fast, ChipMunk, DarthVader, Echo, Reverb
+        case Snail = 0, Rabbit, ChipMunk, DarthVader, Echo, Reverb
     }
     
+    //This method controls all the play back sound effect buttons when tapped
     @IBAction func playSoundForButton(sender: UIButton) {
         print("play sound button pressed")
         
+        //Check and evaluate each case in the enum above based on their tag numbers from storyboard as their integer values
         switch (ButtonType(rawValue: sender.tag)!) {
-        case .Slow:
+        case .Snail:
             playSound(rate: 0.5)
-        case .Fast:
+        case .Rabbit:
             playSound(rate: 1.5)
         case .ChipMunk:
             playSound(pitch: 1000)
@@ -47,12 +54,15 @@ class PlaySoundsViewController: UIViewController {
             playSound(reverb: true)
         }
         
+        //Set the status of the play back to playing
         configureUI(.Playing)
     }
     
+    //Terminate the play back sound
     @IBAction func stopButtonPressed(sender: UIButton) {
         print("stop audio button pressed")
         
+        //Call this function when stop button tapped
         stopAudio()
     }
 
@@ -61,10 +71,14 @@ class PlaySoundsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        //Call this function when view loads on screen
         setupAudio()
+        
     }
     
     override func viewWillAppear(animated: Bool) {
+        
+        //Don't allow play back sounds to play upon view appearing on the screen
         configureUI(.NotPlaying)
     }
 
