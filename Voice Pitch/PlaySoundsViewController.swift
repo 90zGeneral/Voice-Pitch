@@ -42,9 +42,9 @@ class PlaySoundsViewController: UIViewController {
         //Check and evaluate each case in the enum above based on their tag numbers from storyboard as their integer values
         switch (ButtonType(rawValue: sender.tag)!) {
         case .Snail:
-            playSound(rate: 0.5)
+            playSound(rate: 0.3)
         case .Rabbit:
-            playSound(rate: 1.5)
+            playSound(rate: 2.0)
         case .ChipMunk:
             playSound(pitch: 1000)
         case .DarthVader:

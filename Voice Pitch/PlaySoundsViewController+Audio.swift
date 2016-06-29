@@ -7,16 +7,12 @@
 import UIKit
 import AVFoundation
 
+//A continuation of the PlaySoundsViewController that inherits from AVAudioPlayerDelegate
 extension PlaySoundsViewController: AVAudioPlayerDelegate {
+    
+    //Error messages to be thrown
     struct Alerts {
         static let DismissAlert = "Dismiss"
-        static let RecordingDisabledTitle = "Recording Disabled"
-        static let RecordingDisabledMessage = "You've disabled this app from recording your microphone. Check Settings."
-        static let RecordingFailedTitle = "Recording Failed"
-        static let RecordingFailedMessage = "Something went wrong with your recording."
-        static let AudioRecorderError = "Audio Recorder Error"
-        static let AudioSessionError = "Audio Session Error"
-        static let AudioRecordingError = "Audio Recording Error"
         static let AudioFileError = "Audio File Error"
         static let AudioEngineError = "Audio Engine Error"
     }
@@ -63,7 +59,7 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         
         // node for reverb
         let reverbNode = AVAudioUnitReverb()
-        reverbNode.loadFactoryPreset(.Cathedral)
+        reverbNode.loadFactoryPreset(.MediumRoom)
         reverbNode.wetDryMix = 50
         audioEngine.attachNode(reverbNode)
         
@@ -89,7 +85,8 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
                 if let rate = rate {
                     delayInSeconds = Double(self.audioFile.length - playerTime.sampleTime) / Double(self.audioFile.processingFormat.sampleRate) / Double(rate)
                 } else {
-                    delayInSeconds = Double(self.audioFile.length - playerTime.sampleTime) / Double(self.audioFile.processingFormat.sampleRate)
+                    delayInSeconds = Double(self.audioFile.length - playerTime.sampleTime) /
+                        Double(self.audioFile.processingFormat.sampleRate)
                 }
             }
             
@@ -150,6 +147,7 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         }
     }
     
+    //Activate all the play back sound buttons
     func setPlayButtonsEnabled(enabled: Bool) {
         snailButton.enabled = enabled
         chipmunkButton.enabled = enabled

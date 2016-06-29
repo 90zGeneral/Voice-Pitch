@@ -39,26 +39,38 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voice Pitch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzb-wU-o9U">
-                                <rect key="frame" x="85" y="64" width="151" height="41"/>
+                                <rect key="frame" x="85" y="89" width="151" height="41"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="151" id="vev-wC-ATI"/>
-                                    <constraint firstAttribute="height" constant="41" id="wwM-AN-2Yr"/>
+                                    <constraint firstAttribute="width" constant="151" id="VBF-Eo-a8h"/>
+                                    <constraint firstAttribute="height" constant="41" id="YfX-5k-VXB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.10196078431372549" green="0.2196078431372549" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play audio with different sound effects" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aU4-Kg-cdA">
+                                <rect key="frame" x="0.0" y="144" width="320" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="OJL-B4-9mX"/>
+                                    <constraint firstAttribute="height" constant="34" id="XaT-K5-yGi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.1019607843" green="0.21960784310000001" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="kzb-wU-o9U" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="AmD-HB-TPO"/>
                             <constraint firstItem="m9f-2Q-gMo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BtF-I2-ksK"/>
-                            <constraint firstItem="kzb-wU-o9U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CEf-ZS-eTD"/>
                             <constraint firstItem="m9f-2Q-gMo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CRw-dD-6bc"/>
                             <constraint firstItem="pzR-b9-rlA" firstAttribute="top" secondItem="m9f-2Q-gMo" secondAttribute="bottom" constant="19" id="Ij1-Tb-Rxz"/>
+                            <constraint firstItem="aU4-Kg-cdA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lng-Mj-aBP"/>
                             <constraint firstItem="Rgl-n0-ZZt" firstAttribute="top" secondItem="pzR-b9-rlA" secondAttribute="bottom" constant="18" id="TBz-tT-TPC"/>
                             <constraint firstItem="Rgl-n0-ZZt" firstAttribute="centerX" secondItem="pzR-b9-rlA" secondAttribute="centerX" id="Zk8-1B-0kf"/>
                             <constraint firstItem="pzR-b9-rlA" firstAttribute="centerX" secondItem="m9f-2Q-gMo" secondAttribute="centerX" id="bcY-fP-llT"/>
+                            <constraint firstItem="kzb-wU-o9U" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="ew5-Cz-Bra"/>
+                            <constraint firstItem="aU4-Kg-cdA" firstAttribute="top" secondItem="kzb-wU-o9U" secondAttribute="bottom" constant="14" id="lU5-l8-LTT"/>
+                            <constraint firstItem="kzb-wU-o9U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zux-Rp-hZ5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2Pc-a7-RGW"/>
@@ -161,6 +173,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Z6K-o5-hOd" firstAttribute="top" secondItem="xRL-dY-HMA" secondAttribute="bottom" id="Lyj-Hu-zt3"/>
                             <constraint firstItem="Bw6-Ej-htw" firstAttribute="top" secondItem="Z6K-o5-hOd" secondAttribute="bottom" id="MUQ-9W-b8C"/>
